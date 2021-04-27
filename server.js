@@ -1,5 +1,5 @@
 const express = require('express');
-const animals = require('./data/animals');
+const animals = require('./data/animals.json');
 
 let app = express();
 
