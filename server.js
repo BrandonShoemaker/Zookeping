@@ -30,6 +30,6 @@ app.get('/api/animals', (req, res) => {
     res.json(animals);
 });
 
-app.listen(PORT, () => {
-    console.log(`You are now listening on port ${PORT}`);
+app.listen(80, () => {
+    console.log(`You are now listening on port 80`);
 });
