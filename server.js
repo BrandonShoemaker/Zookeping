@@ -3,6 +3,8 @@ const animals = require('./data/animals');
 
 let app = express();
 
+let PORT = process.env.PORT || 3001;
+
 function filterByQuery(query, animalsArr){
     let personalityTraitsArr = [];
     let filteredResults = animalsArr;
@@ -29,6 +31,6 @@ app.get('/api/animals', (req, res) => {
     res.json(animals);
 });
 
-app.listen(3001, () => {
-    console.log("You are now listening on port 3001");
+app.listen(PORT, () => {
+    console.log(`You are now listening on port ${PORT}`);
 });
