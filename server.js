@@ -69,7 +69,19 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
-})
+});
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animal.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeeper.html'));
+});
+
+app.get('*', (req, res) =>{
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 app.get('/api/animals', (req, res) => {
     let results = animals;  
